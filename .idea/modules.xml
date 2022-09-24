@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DataStructure.iml" filepath="$PROJECT_DIR$/DataStructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Datastructure/Datastructure.iml" filepath="$PROJECT_DIR$/Datastructure/Datastructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/Recursion/Recursion.iml" filepath="$PROJECT_DIR$/Recursion/Recursion.iml" />
       <module fileurl="file://$PROJECT_DIR$/Search/Search.iml" filepath="$PROJECT_DIR$/Search/Search.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sort/Sort.iml" filepath="$PROJECT_DIR$/Sort/Sort.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter01/chapter01.iml" filepath="$PROJECT_DIR$/chapter01/chapter01.iml" />
     </modules>
   </component>
 </project>
