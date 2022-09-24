@@ -3,6 +3,8 @@
 /**
  *  迷宫问题，用到递归、回溯
  *
+ *  git: 改了代码先提交本地库，commit changes
+ *
  */
 public class Maze {
 
@@ -23,7 +25,12 @@ public class Maze {
         //设置挡板, 1 表示
         map[3][1] = 1;
         map[3][2] = 1;
+        //显示一下原来的迷宫
+        list(map);
 
+        //进行
+        boolean result = setWay(map, 1, 1);
+        System.out.println(result);
         list(map);
 
 
@@ -32,10 +39,10 @@ public class Maze {
     //回忆二维数组，int[][] arr = {{1,2,5},{7,10,15},{2,34,56,0}}; arr.length=3，就是里面的三个元素！arr[i].length是具体的
     public static void list(int[][] map){
         for (int i = 0; i < map.length; i++){
-            System.out.println();
             for (int j = 0; j < map[i].length; j++){
                 System.out.print(map[i][j] + " ");
             }
+            System.out.println();
         }
     }
 
@@ -56,13 +63,13 @@ public class Maze {
      * @return 如果找到通路，就返回true, 否则返回false，
      *      return的值正好用于if条件判断，如果遇到墙、障碍物，if(setWay(map, i, j))直接不满足，进行下一个方向的判断，都不满足，就是最后的return false
      */
-    public boolean setWay(int[][] map, int i, int j){
-        if (map[6][5] == 2){
+    public static boolean setWay(int[][] map, int i, int j){
+        if (map[4][5] == 2){
             //方法是一个个点去按约定走，如果能走通，该点置2.
             // 一开始是初始值0，如果map[6][5]=2，说明已经走了一条通路一直到map[6][5]了
             return true;
         }else {
-            //如果这个点是没走过的点，那就走一轮试试
+            //如果这个点是没走过的点，那就走一轮试试,走过的点就不要再走了，要不然会出问题
             if (map[i][j]==0){
                 //先假定该点是通的，如果不通，后面再重新置一个值
                 map[i][j] = 2;
@@ -85,6 +92,7 @@ public class Maze {
                     return false;
                 }
             }else {// 如果map[i][j] != 0 , 可能是 1， 2， 3
+
                 return false;
             }
         }
