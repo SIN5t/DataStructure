@@ -7,7 +7,6 @@ package cn.edu.uestc.recursion;
  *
  */
 public class Maze {
-
     public static void main(String[] args) {
         //使用二维数组模拟迷宫
         //地图，二维数组中 1 表示墙
@@ -35,8 +34,12 @@ public class Maze {
 
 
     }
-    //遍历迷宫的方法
     //回忆二维数组，int[][] arr = {{1,2,5},{7,10,15},{2,34,56,0}}; arr.length=3，就是里面的三个元素！arr[i].length是具体的
+
+    /**
+     * 遍历迷宫的方法
+     * @param map 如果map是成员变量，其实写代码的时候也可以不用传入，直接内部调用输出，这个类似的有写过
+     */
     public static void list(int[][] map){
         for (int i = 0; i < map.length; i++){
             for (int j = 0; j < map[i].length; j++){
@@ -64,7 +67,7 @@ public class Maze {
      *      return的值正好用于if条件判断，如果遇到墙、障碍物，if(setWay(map, i, j))直接不满足，进行下一个方向的判断，都不满足，就是最后的return false
      */
     public static boolean setWay(int[][] map, int i, int j){
-        if (map[4][5] == 2){
+        if (map[4][5] == 2){//递归的结束条件！！很重要这个思想！
             //方法是一个个点去按约定走，如果能走通，该点置2.
             // 一开始是初始值0，如果map[6][5]=2，说明已经走了一条通路一直到map[6][5]了
             return true;
@@ -97,5 +100,4 @@ public class Maze {
             }
         }
     }
-
 }

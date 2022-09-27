@@ -1,4 +1,4 @@
-package cn.edu.uestc.algorithm.SimpleSort;
+package cn.edu.uestc.algorithm.SimpleSort.QianFen;
 /*
 3 插入排序
 3.1 算法描述
